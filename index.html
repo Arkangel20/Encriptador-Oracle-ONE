@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto Oracle ONE - Carlos Alberto Martinez Bonilla</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="header__title">Encriptador de texto</h1>
+    </header>
+
+    <main class="main">
+        <section class="input-section">
+            <textarea class="input-section__textarea" id="textInput" rows="4" placeholder="Ingrese el texto aquí..."></textarea>
+            <div class="message-validation">
+                <p class="message-validation__error"> No se aceptan mayúsculas ni caracteres especiales. </p>
+            </div>
+        </section>
+
+        <section class="button-section">
+            <button class="btn" id="encryptButton" onclick="encryptText()">Encriptar</button>
+            <button class="btn" id="decryptButton" onclick="decryptText()">Desencriptar</button>
+        </section>
+
+        <section class="output-section">
+            <img src="/assets/logo.png" alt="Logo" class="output-section__logo" />
+            <div class="message-validation">
+                <p class="message-validation__message"> Ningún mensaje fue encontrado </p>
+                <p class="message-validation__instructions"> Ingresa el texto que desees encriptar o desencriptar. </p>
+            </div>
+            <button class="output-section__copy-button" id="copyButton" onclick="copyToClipboard()">Copiar</button>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">Creado por Carlos Alberto Martinez Bonilla, 2024.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

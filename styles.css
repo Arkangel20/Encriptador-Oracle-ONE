@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #1e3a8a;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header__title {
+    font-size: 28px;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.input-section {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-section__textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #1e3a8a;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+}
+
+.message-validation {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.message-validation__error {
+    color: #7f827f;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #1e3a8a;
+    border-radius: 10px;
+    background-color: #1e3a8a;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #1e3a8a;
+}
+
+.output-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.output-section__logo {
+    display: none; 
+    max-width: 100px;
+    margin: 0 auto 15px;
+}
+
+.message-validation__message {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.message-validation__instructions {
+    font-size: 14px;
+    color: #4a5568;
+    margin-top: 5px;
+}
+
+.output-section__copy-button {
+    display: none;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.output-section__copy-button:hover {
+    background-color: #ffffff;
+    color: #1e3a8a;
+    border: 2px solid #1e3a8a;
+}
+
+.footer {
+    padding: 1rem;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: auto; 
+}
+
+.footer__text {
+    font-size: 0.875rem;
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .header__title {
+        font-size: 1.25rem;
+    }
+
+    .main {
+        width: 95%;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+    }
+
+    .input-section__textarea {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header__title {
+        font-size: 1.75rem;
+    }
+
+    .main {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .input-section__textarea {
+        font-size: 1rem;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header__title {
+        font-size: 2rem;
+    }
+
+    .main {
+        max-width: 1000px;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        grid-template-areas:
+            "input-section output-section"
+            "button-section output-section";
+    }
+
+    .input-section {
+        height: 100%;
+        grid-area: input-section;
+        margin-bottom: 0;
+    }
+
+    .button-section {
+        grid-area: button-section;
+        margin-top: 10px;
+        margin-bottom: 400px;
+    }
+
+    .output-section {
+        height: 100%;
+        grid-area: output-section;
+    }
+
+    .btn {
+        font-size: 1.125rem;
+        padding: 18px;
+    }
+
+    .input-section__textarea {
+        font-size: 1.125rem;
+        padding: 25px;
+    }
+
+    .output-section__logo {
+        display: block; 
+    }
+}
