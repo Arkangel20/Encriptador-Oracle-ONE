@@ -62,8 +62,10 @@ function updateOutput(text) {
         logo.style.display = "none"; 
         instructions.style.display = "none"; 
     } else {
+        outputMessage.textContent = "Ningún mensaje fue encontrado";
         copyButton.style.display = "none"; 
         logo.style.display = "block"; 
         instructions.style.display = "block"; 
     }
 }
+
