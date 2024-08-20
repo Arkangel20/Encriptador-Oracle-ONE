@@ -25,3 +25,6 @@ Este proyecto es un encriptador de texto desarrollado como parte del programa Or
 1. Clona este repositorio:
    ```bash
    git clone https://github.com/Arkangel20/Encriptador-Oracle-ONE.git
+
+## Resultado
+![App Screenshot](resultado.png)
