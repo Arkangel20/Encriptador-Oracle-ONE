@@ -11,7 +11,7 @@ Este proyecto es un encriptador de texto desarrollado como parte del programa Or
 ## Tecnologías Utilizadas
 
 - **HTML5**: Estructura de la página.
-- **CSS3**: Estilos y diseño responsivo.
+- **CSS**: Estilos y diseño responsivo.
 - **JavaScript**: Lógica de encriptación y desencriptación.
 
 ## Cómo Usar
