@@ -1,13 +1,24 @@
 function encryptText() {
-    const textInput = document.getElementById("textInput").value;
+    let textInput = document.getElementById("textInput").value;
+
+    textInput = textInput.toLowerCase();
+
+    if (/[^a-z\s]/.test(textInput)) {
+        alert("El texto contiene caracteres especiales no permitidos.");
+        updateOutput("");
+        return;
+    }
 
     if (textInput.trim() === "") {
         alert("Por favor, ingrese un texto para encriptar.");
+        updateOutput(""); 
+        return;
     }
 
     const isAlreadyEncrypted = /(enter|imes|ai|ober|ufat)/.test(textInput);
     if (isAlreadyEncrypted) {
         alert("El texto ya está encriptado.");
+        updateOutput(""); 
         return;
     }
 
@@ -22,10 +33,20 @@ function encryptText() {
 }
 
 function decryptText() {
-    const textInput = document.getElementById("textInput").value;
+    let textInput = document.getElementById("textInput").value;
+
+    textInput = textInput.toLowerCase();
+
+    if (/[^a-z\s]/.test(textInput)) {
+        alert("El texto contiene caracteres especiales no permitidos.");
+        updateOutput(""); 
+        return;
+    }
 
     if (textInput.trim() === "") {
         alert("Por favor, ingrese un texto para desencriptar.");
+        updateOutput("");
+        return;
     }
 
     const decryptedText = textInput
@@ -68,4 +89,5 @@ function updateOutput(text) {
         instructions.style.display = "block"; 
     }
 }
+
 
