@@ -1,7 +1,11 @@
 function encryptText() {
     let textInput = document.getElementById("textInput").value;
 
-    textInput = textInput.toLowerCase();
+    if (/[A-Z]/.test(textInput)) {
+        alert("El texto contiene letras mayúsculas, por favor use solo letras minúsculas.");
+        updateOutput("");
+        return;
+    }
 
     if (/[^a-z\s]/.test(textInput)) {
         alert("El texto contiene caracteres especiales no permitidos.");
@@ -35,11 +39,15 @@ function encryptText() {
 function decryptText() {
     let textInput = document.getElementById("textInput").value;
 
-    textInput = textInput.toLowerCase();
+    if (/[A-Z]/.test(textInput)) {
+        alert("El texto contiene letras mayúsculas, por favor use solo letras minúsculas.");
+        updateOutput("");
+        return;
+    }
 
     if (/[^a-z\s]/.test(textInput)) {
         alert("El texto contiene caracteres especiales no permitidos.");
-        updateOutput(""); 
+        updateOutput("");
         return;
     }
 
@@ -61,7 +69,7 @@ function decryptText() {
 
 function copyToClipboard() {
     const textOutput = document.querySelector(".output-section .message-validation__message").textContent;
-    
+
     navigator.clipboard.writeText(textOutput)
         .then(() => {
             alert("Texto copiado al portapapeles");
